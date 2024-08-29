@@ -1,0 +1,1065 @@
+/* CABEÇALHO */
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0% 10%;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.my-photo img {
+    width: 250px;
+    height: 250px;
+
+
+}
+
+.name-title {
+    position: relative;
+    display: inline-block;
+}
+
+.name-title h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    padding: 10px 20px;
+
+}
+
+
+
+.contact {
+    margin-left: auto;
+    /* Empurra o botão de contato para o canto direito */
+}
+
+.contact a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #18b400;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact a:hover {
+    background-color: #bcbcbc;
+}
+
+
+
+
+.back-redes {
+    margin: 0;
+
+    background-color: #d37801;
+    max-height: 100%;
+    height: 50px;
+
+}
+
+
+
+/*-------------------------FIM*/
+
+
+/* MENU MOBILE */
+
+.btn-abrirMenu .icone{
+    color: white;
+    font-size: 40px;
+    margin-right: 20px;
+    
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.736);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8888;
+    display: none;
+}
+
+.btn-abrirMenu{
+    display: none;
+}
+
+.menu-mobile{
+    background-color: rgba(0, 0, 0, 0.838);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+
+    transition: .8s;
+}
+
+
+
+.menu-mobile.abrir-menu1{
+    width: 60%;
+}
+
+.menu-mobile.abrir-menu1 ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(31, 144, 0);
+    margin-left: -150px;
+    margin-top: 20px;
+    
+}
+
+
+.menu-mobile nav a{
+    margin-top: 10%;
+    text-align: right;
+    font-size: 20px;
+    text-decoration: none;
+    color:rgb(0, 150, 5);   
+    padding: 25px 10%;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+
+    
+}
+
+
+.menu-mobile nav a:hover {
+    background-color: rgba(0, 0, 0, 0.956);
+    color: rgb(151, 151, 151);
+ 
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SOCIAL MÍDIA */
+
+.social-media {
+    text-align: center;
+    margin: 0;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 20px;
+    /* Espaçamento entre os ícones */
+}
+
+.social-media ul li {
+    display: inline;
+}
+
+.social-media ul li a {
+    display: inline-block;
+}
+
+.social-media ul li img {
+    width: 40px;
+    /* Tamanho dos ícones */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media ul li img:hover {
+    transform: scale(1.2);
+    /* Aumenta o ícone quando o mouse passa por cima */
+}
+
+
+
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media ul{
+    background-color: white;
+    border-radius: 50px;
+    width: 300px;
+    height: 60px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(270deg, #ffffff, #424342cf, #ffffff);
+    background-size: 600% 600%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Responsividade para o Header */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn-abrirMenu{
+        display: block;
+    }
+
+    .my-photo img {
+        width: 200px; /* Reduz a largura da imagem em dispositivos menores */
+        height: 200px; /* Mantém a proporção da imagem */
+        margin-bottom: 10px; /* Adiciona espaço abaixo da imagem */
+    }
+
+    .name-title h1 {
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }
+
+    .contact {
+        margin-top: 10px;
+        margin-left: 0; /* Centraliza o botão de contato */
+    }
+
+    .contact a {
+        font-size: 20px; /* Reduz o tamanho da fonte do botão */
+        padding: 8px 16px; /* Ajusta o padding para telas menores */
+    }
+}
+
+/* Responsividade para a Social Media */
+@media (max-width: 768px) {
+
+    .social-media{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .social-media ul {
+        gap: 15px; /* Reduz o espaçamento entre os ícones */
+    }
+
+    .social-media ul li img {
+        width: 35px; /* Reduz o tamanho dos ícones */
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-photo img {
+        width: 150px; /* Reduz ainda mais a largura da imagem para dispositivos muito pequenos */
+        height: 150px;
+    }
+
+    .name-title h1 {
+        font-size: 18px; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .contact a {
+        font-size: 18px; /* Ajusta o tamanho da fonte do botão */
+        padding: 6px 12px; /* Reduz o padding do botão */
+    }
+
+    .social-media ul {
+        gap: 10px; /* Reduz ainda mais o espaçamento entre os ícones */
+    }
+
+    .social-media ul li img {
+        width: 30px; /* Reduz ainda mais o tamanho dos ícones */
+        height: 30px;
+    }
+}
+
+/* --------------------------FIM */
+
+
+
+
+
+
+
+
+
+
+/* SOBRE MIM - TEXTO */
+
+.sobre-mim{
+    margin:10%;
+    flex-direction: column;
+}
+
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.title h1 {
+    color: #18b400;
+    font-size: 2.5em;
+
+    text-align: start;
+}
+
+
+.title p{
+    color: white;
+}
+
+
+@media (max-width: 480px) {
+    .sobre-mim{
+        margin-bottom: 50%;
+    }
+}
+
+/* --------------------------FIM */
+
+
+
+
+
+
+
+/* FOTO/SOBRE MIM */
+
+
+.imagem-de-mim img{
+    height: 500px;
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+    animation: float 3s ease-in-out infinite;
+    
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Ponto de partida */
+    }
+    50% {
+        transform: translateY(-20px); /* Sobe 20px */
+    }
+}
+
+.DADOS {
+    margin: 10%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+.texto {
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:0% 5%;
+}
+
+.texto h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color:#18b400;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.info-item {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.info-item strong {
+    color: #fff;
+    font-weight: bold;
+}
+
+.info-item a{
+    color: rgb(34, 155, 1);
+}
+
+.texto p {
+    margin-top: 20px;
+    color: #ffffff;
+
+}
+
+
+/* Responsividade para a seção DADOS */
+@media (max-width: 768px) {
+    .DADOS {
+        flex-direction: column; /* Altera a direção dos itens para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .imagem-de-mim img {
+        height: 300px; /* Reduz a altura da imagem em dispositivos menores */
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
+    }
+
+    .texto {
+        padding: 0 10px; /* Ajusta o padding para telas menores */
+    }
+
+    #titulo {
+        font-size: 22px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr; /* Exibe os itens em uma única coluna */
+    }
+
+    .info-item {
+        text-align: center; /* Centraliza o texto dos itens da grade */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagem-de-mim img {
+        height: 250px; /* Reduz ainda mais a altura da imagem para dispositivos muito pequenos */
+    }
+
+    .texto h1 {
+        font-size: 1.8em; /* Reduz o tamanho da fonte do título para dispositivos muito pequenos */
+    }
+
+    .texto p {
+        font-size: 1em; /* Ajusta o tamanho da fonte para melhorar a legibilidade */
+    }
+
+    .info-item {
+        padding: 5px; /* Reduz o padding dos itens da grade */
+    }
+}
+
+/* ---------------------------------FIM */
+
+
+
+/* HABILIDADES */
+
+/* Estilos Gerais */
+.habilidades {
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10%;
+}
+
+.habilidades h2 {
+    color: #18b400;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.habilidades p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de igual largura */
+    gap: 20px; /* Espaçamento entre as colunas e linhas */
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    margin-top: -25px;
+}
+
+.skill h3 {
+    color: white;
+    margin-bottom: 0px; /* Espaçamento menor entre o título e a barra de progresso */
+    font-size: 1.1em;
+}
+
+.progress {
+    color: #fff;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.progress-bar {
+    background-color: #18b400;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    transition: width 2s ease;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: attr(data-progress);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Altera para uma coluna única em telas menores */
+        gap: 15px; /* Reduz o espaçamento entre as colunas */
+    }
+
+    .habilidades h2 {
+        font-size: 2em; /* Reduz o tamanho do título */
+    }
+
+    .habilidades p {
+        font-size: 1em; /* Reduz o tamanho do texto */
+    }
+
+    .skill h3 {
+        font-size: 1em; /* Ajusta o tamanho do texto das habilidades */
+    }
+
+    .progress {
+        height: 18px; /* Ajusta a altura da barra de progresso */
+    }
+
+    .progress-bar::after {
+        font-size: 0.8em; /* Reduz o tamanho do texto na barra de progresso */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        gap: 10px; /* Reduz ainda mais o espaçamento entre as colunas */
+    }
+
+    .habilidades h2 {
+        font-size: 1.8em; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .habilidades p {
+        font-size: 0.9em; /* Ajusta o tamanho do texto */
+    }
+
+    .skill h3 {
+        font-size: 0.9em; /* Ajusta o tamanho do texto das habilidades para telas muito pequenas */
+    }
+
+    .progress {
+        height: 16px; /* Reduz a altura da barra de progresso para telas pequenas */
+    }
+
+    .progress-bar::after {
+        font-size: 0.7em; /* Ajusta o tamanho do texto na barra de progresso */
+    }
+}
+
+
+/* --------------------------FIM */
+
+
+
+/* PROJETOS */
+.projetos {
+    margin: 10%;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.projetos h2 {
+    color: #18b400;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.projetos p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+
+
+.project-card {
+    background-color: #ffffff;
+    padding: 0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+    text-align: left;
+    border-radius: 15px; /* Bordas mais arredondadas */
+    overflow: hidden; /* Garante que o conteúdo do card não ultrapasse as bordas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* Aumenta a sombra ao passar o mouse */
+}
+
+.project-card img {
+    max-width: 100%;
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Faz a imagem cobrir todo o espaço disponível sem distorção */
+    border-bottom: 3px solid #18b400; /* Linha de destaque na parte inferior da imagem */
+    
+    
+}
+
+.project-card h3 {
+    margin: 20px;
+    font-size: 1.8em;
+    color: #000000;
+    text-align: center;
+}
+
+.project-card p {
+    color: #7a7a7a;
+    margin: 0 20px;
+    text-align: start;
+}
+
+.project-card a {
+    margin-top: 20px;
+    margin-left: 30%;
+    color: #019011;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+    
+}
+
+.project-card a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+.project-card a:hover::after {
+    width: 100%; /* A linha se expande até a largura total do link */
+}
+
+
+/* Responsividade para a seção de projetos */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Altera para uma coluna única em telas menores */
+        gap: 15px; /* Reduz o espaçamento entre os cartões */
+    }
+
+    .projetos h2 {
+        font-size: 2em; /* Reduz o tamanho do título */
+    }
+
+    .projetos p {
+        font-size: 1em; /* Reduz o tamanho do texto */
+    }
+
+    .project-card {
+        margin-bottom: 20px; /* Adiciona espaço entre os cartões em telas menores */
+    }
+
+    .project-card img {
+        height: 200px; /* Reduz a altura das imagens em dispositivos menores */
+    }
+
+    .project-card h3 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do título do projeto */
+        margin: 15px; /* Ajusta a margem do título do projeto */
+    }
+
+    .project-card p {
+        font-size: 1em; /* Reduz o tamanho da fonte da descrição */
+    }
+
+    .project-card a {
+        margin-left: 0; /* Centraliza o link em telas menores */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        gap: 10px; /* Reduz ainda mais o espaçamento entre os cartões */
+    }
+
+    .project-card img {
+        height: 150px; /* Reduz ainda mais a altura das imagens para dispositivos muito pequenos */
+    }
+
+    .project-card h3 {
+        font-size: 1.2em; /* Reduz o tamanho da fonte do título do projeto */
+    }
+
+    .project-card p {
+        font-size: 0.9em; /* Ajusta o tamanho da fonte da descrição */
+    }
+
+    .project-card a {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do link */
+    }
+}
+
+/* --------------------------FIM */
+
+
+
+/* CERTIFICADOS */
+
+.certificados {
+    margin: 15%;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+   
+}
+
+.certificados h2 {
+    font-size: 2.5em;
+    margin-bottom: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #18b400;
+
+}
+
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.certificado-card {
+    position: relative; /* Define o contêiner como referência para posicionamento absoluto */
+    background-color: #ffffff;
+    padding: 0px;
+    border-radius: 10px;
+   
+    text-align: center;
+    
+}
+
+
+
+.certificado-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+
+.certificado-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    margin-bottom: 80px;
+    color: #333;
+}
+
+.certificado-link {
+    color: #18b400;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.certificado-link:hover {
+    color: #0f7d00;
+}
+
+.certificado-link i {
+    font-size: 1.5em; /* Tamanho do ícone */
+}
+
+
+.certificado-link-button {
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner pai */
+    bottom: 10px; /* Posiciona o ícone a 10px do fundo do card */
+    right: 40%; /* Posiciona o ícone a 10px da borda direita do card */
+    width: 40px;
+    height: 40px;
+    background-color: #161616;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.certificado-link-button:hover {
+    background-color: #0f7d00; /* Cor de fundo ao passar o mouse */
+}
+
+.certificado-link-button i {
+    font-size: 1.2em; /* Tamanho do ícone */
+}
+
+
+@media (max-width: 480px) {
+
+    .certificados{
+        margin-top: 50%;
+    }
+
+    .certificados h2{
+        font-size: 32px;
+    }
+}
+
+/* --------------------------FIM */
+
+
+
+
+/* CONTATO */
+.contato {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 15%;
+    background-color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.contato-info {
+    flex: 1;
+    margin-right: 40px;
+    
+}
+
+.contato-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #18b400;
+    position: relative; /* Necessário para que a animação mova o elemento em relação à sua posição original */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Ponto de partida */
+    }
+    50% {
+        transform: translateY(-10px); /* Sobe 10px */
+    }
+}
+
+
+.contato-info p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contato-info a {
+    color: #18b400;
+    text-decoration: none;
+    
+}
+
+.contato-info img{
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+ 
+}
+
+.contato-formulario {
+    flex: 1;
+}
+
+.contato-formulario h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative; /* Necessário para que a animação mova o elemento em relação à sua posição original */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Ponto de partida */
+    }
+    50% {
+        transform: translateY(-10px); /* Sobe 10px */
+    }
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.input-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #18b400;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0f7d00;
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+}
+
+button:active {
+    transform: scale(0.95); /* Reduz o tamanho em 5% quando pressionado */
+}
+
+
+button:hover {
+    background-color: #787878;
+}
+
+
+
+@media (max-width: 768px) {
+    .contato {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+
+    .contato-info, .contato-formulario {
+        margin-right: 0;
+        margin-bottom: 20px; /* Adiciona espaçamento entre as seções */
+    }
+
+    .contato-formulario {
+        margin-bottom: 0; /* Remove a margem inferior */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .certificados-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Reduz a largura mínima das colunas */
+        gap: 10px; /* Reduz o espaçamento entre os cartões */
+    }
+}
+
+@media (max-width: 480px) {
+    .certificados-grid {
+        grid-template-columns: 1fr; /* Um único cartão por linha em telas muito pequenas */
+    }
+}
